@@ -30,10 +30,10 @@ Cypress.Commands.add('postarUsuarioSemSucesso', () => {
         url: '/usuarios',
         failOnStatusCode: false,
         body: {
-          "nome": "Rose Barrows",
-          "email": "automation-postUserAdrianna27@gmail.com",
-          "password": "1234",
-          "administrador": "true"
+            "nome": "Fulano da Silva",
+            "email": "fulano@qa.com",
+            "password": "teste",
+            "administrador": "true"
         }
     })
 })
