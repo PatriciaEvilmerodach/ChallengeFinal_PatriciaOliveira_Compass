@@ -23,6 +23,7 @@
   "homepage": "https://github.com/PatriciaEvilmerodach/ChallengeFinal_PatriciaOliveira_Compass#readme",
   "devDependencies": {
     "@faker-js/faker": "^7.5.0",
+    "ajv": "^8.11.0",
     "cypress": "^9.7.0"
   }
 }
