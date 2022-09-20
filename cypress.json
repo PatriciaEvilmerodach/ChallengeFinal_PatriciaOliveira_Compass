@@ -5,5 +5,16 @@
     "viewportHeight": 650,
     "chromeWebSecurity": false,
     "numTestsKeptInMemory": 5,
-    "screenshotsFolder": "reports/screenshots"
+    "screenshotsFolder": "reports/screenshots",
+
+    "reporter": "cypress-mochawesome-reporter",
+    "reporterOptions": {
+        "reportDir": "cypress/report",
+        "charts": true,
+        "reportPageTitle": "Automação de testes - API Serverest",
+
+        "autoOpen": true,
+        "overwrite": false,
+        "saveJson": true
+      }
 }
