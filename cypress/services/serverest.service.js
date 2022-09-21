@@ -6,7 +6,10 @@ const URL_PRODUTOS  = '/produtos'
 const URL_CARRINHOS = '/carrinhos'
 
 export default class Serverest {
+
     // Ações que podemos realizar na API
+
+    // Usuários
 
     static buscarUsuarios(){
         return cy.request('GET', URL_USUARIOS)
@@ -29,6 +32,10 @@ export default class Serverest {
         Cypress.env('bearer', resposta.body.authorization.slice(7))
     }
 
+    static cadastrarUsuarioComSucesso (usuario) {
+        return cy.rest('POST', URL_USUARIOS, usuario)
+    }
+
     // Produtos //
 
     static buscarProdutos() {
@@ -48,4 +55,45 @@ export default class Serverest {
             }
         })
     }
+
+    // Carrinhos //
+
+    static buscarCarrinhos(){
+        return cy.rest('GET', URL_CARRINHOS);
+    }
+
+    static cadastrarCarrinhoComSucesso(produtos){
+        return cy.request({
+            method: 'POST',
+            url: URL_CARRINHOS,
+            body: produtos,
+            failOnStatusCode: false,
+            auth: {                     
+                bearer: Cypress.env("bearer")
+            }
+        })
+    }
+
+    static finalizarCompraComSucesso(){
+        return cy.request({
+            method: 'DELETE',
+            url: URL_CARRINHOS+'/concluir-compra',
+            failOnStatusCode: false,
+            auth: {                     
+                bearer: Cypress.env("bearer")
+            }
+        })
+    }
+
+    static cancelarCompraComSucesso(){
+        return cy.request({
+            method: 'DELETE',
+            url: URL_CARRINHOS+'/cancelar-compra',
+            failOnStatusCode: false,
+            auth: {                     
+                bearer: Cypress.env("bearer")
+            }
+        })
+    }
+
 }
