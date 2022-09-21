@@ -84,7 +84,7 @@ Em seguida, os testes deverão ser automaticamente executados e um report em HTM
 
 ## License
 
-Distribuído sob a [MIT License](inserir link da licença)
+Distribuído sob a [MIT License](https://github.com/PatriciaEvilmerodach/ChallengeFinal_PatriciaOliveira_Compass/blob/main/LICENSE)
 
 Copyright (c) 2022 PatriciaEvilmerodach
 
